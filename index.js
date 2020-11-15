@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 const port = process.env.PORT || 4040;
 
-const url = "mongodb+srv://bloodbank:bloodbankPassword@bloodbank.dxpar.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const url = process.env.url;
 const jwtTK = process.env.JWTTK;
 
 function authorize(req, res, next) {
